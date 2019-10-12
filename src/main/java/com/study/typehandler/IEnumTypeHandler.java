@@ -15,6 +15,11 @@ import java.util.Arrays;
 /**
  * @author ：fei
  * @date ：Created in 2019/10/11 0011 15:21
+ * TypeHandler在注册时调用TypeHandlerRegistry#register方法
+ * 该方法会根据MappedTypes注解是否有值去判定调用那个register方法
+ * 两个方法都会调用TypeHandlerRegistry#getInstance方法获取TypeHandler
+ * 当有MappedTypes注解时会调用有参构造方法参数类型为Class，
+ * 没有该注解时会调用无参构造方法
  */
 @MappedTypes({SCORE.class})
 public class IEnumTypeHandler<E extends Enum<E> & IEnum<E>> extends BaseTypeHandler<E> {
