@@ -1,16 +1,20 @@
 package com.study.entity;
 
+import com.study.ienum.SCORE;
+import org.apache.ibatis.type.Alias;
+
 import java.util.Date;
 
 /**
  * @author ：fei
  * @date ：Created in 2019/10/10 0010 09:32
  */
+@Alias("stu")
 public class Student {
     private Integer uid;
     private String name;
     private Integer grade;
-    private Integer score;
+    private SCORE score;
     private Date createTime;
 
     public Integer getUid() {
@@ -37,11 +41,11 @@ public class Student {
         this.grade = grade;
     }
 
-    public Integer getScore() {
+    public SCORE getScore() {
         return score;
     }
 
-    public void setScore(Integer score) {
+    public void setScore(SCORE score) {
         this.score = score;
     }
 

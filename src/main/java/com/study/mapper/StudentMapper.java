@@ -17,11 +17,12 @@ public interface StudentMapper {
      * @param uid
      * @return student
      */
-    @Select({"<script>",
+    /*@Select({"<script>",
             "select * from student",
             "<where> ",
             "uid = #{uid} ",
             "</where>",
-            "</script>"})
+            "</script>"})*/
     Student select(Integer uid);
+    Integer insert(Student student);
 }

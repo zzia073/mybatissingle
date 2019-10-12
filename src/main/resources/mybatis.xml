@@ -3,7 +3,18 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-    <properties resource="jdbc.properties"></properties>
+    <properties resource="jdbc.properties">
+        <property name="git" value="git1"/>
+    </properties>
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+    <typeAliases>
+        <package name="com.study.entity"/>
+    </typeAliases>
+    <typeHandlers>
+        <package name="com.study.typehandler"/>
+    </typeHandlers>
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
@@ -15,7 +26,7 @@
             </dataSource>
         </environment>
     </environments>
-    <!--<mappers>
+    <mappers>
         <package name="com.study.mapper"/>
-    </mappers>-->
+    </mappers>
 </configuration>

@@ -45,6 +45,7 @@ public class SqlSessionFactoryTest {
                 new SqlSessionFactoryBuilder().build(inputStream);
         SqlSession sqlSession = sqlSessionFactory.openSession();
         StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
+        //封装create_time时没有封装进去，可以配置全局设置(mapUnderscoreToCamelCase)或者resultMap去做映射
         Student stu = studentMapper.select(1);
         System.out.println(stu);
         System.out.println(stu.getName());
