@@ -16,7 +16,7 @@
 
 以上两种方式不能同时配置一个名称空间的方法
 
-####三、Configuration的个元素配置
+####三、Configuration的各元素配置
 
 1. properties的加载顺序（后边的会覆盖前边已经加载的）
    1. property标签属性

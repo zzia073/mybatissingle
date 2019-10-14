@@ -3,6 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.study.mapper.StudentMapper">
+    <!-- #和$的区别SqlSourceBuilder在构建sql的时候解析时如果是#则会用?去生成占位符如果是$则直接解析字符串替换 -->
     <select id="select" resultType="com.study.entity.Student">
     select * from student where uid = #{ad}
   </select>
